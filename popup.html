@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Coding Mentor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">AI</div>
+      <div class="brand-copy"><h1>Coding Mentor</h1><p>Your personal DSA assistant</p></div>
+      <button id="settingsBtn" class="icon-button" title="Settings" aria-label="Settings">⚙</button>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">LEARN BY SOLVING</div>
+      <h2>Get unstuck.<br><span>Learn to think.</span></h2>
+      <p>Use hints, understand code, and debug mistakes without skipping the learning.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><strong id="solvedCount">0</strong><span>Problems solved</span></div>
+      <div class="stat"><strong id="hintCount">0</strong><span>Hints used</span></div>
+      <div class="stat"><strong id="problemCount">0</strong><span>Problems tracked</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading"><h3>Practice workspace</h3><p>Paste a problem or code snippet below.</p></div>
+      <label for="problem">Problem statement</label>
+      <textarea id="problem" rows="4" placeholder="Example: Given an array of integers, return indices of two numbers that add up to target..."></textarea>
+      <label for="language">Programming language</label>
+      <select id="language">
+        <option>Python</option><option>Java</option><option>C++</option><option>JavaScript</option><option>C</option><option>Other</option>
+      </select>
+      <label for="code">Your code / error (optional for hints)</label>
+      <textarea id="code" rows="5" placeholder="Paste your code or the error message here..."></textarea>
+
+      <div class="actions">
+        <button class="action-card primary" data-mode="hint"><span class="action-symbol">✦</span><span><b>Get next hint</b><small>Progressive guidance, not the answer</small></span><span class="chevron">›</span></button>
+        <button class="action-card" data-mode="explain"><span class="action-symbol">≡</span><span><b>Explain my code</b><small>Understand each important line</small></span><span class="chevron">›</span></button>
+        <button class="action-card" data-mode="debug"><span class="action-symbol">⌁</span><span><b>Debug my code</b><small>Find likely issues and fixes</small></span><span class="chevron">›</span></button>
+        <button class="action-card" data-mode="solution"><span class="action-symbol">⌘</span><span><b>Show full solution</b><small>Only after you've tried</small></span><span class="chevron">›</span></button>
+      </div>
+      <div id="message" class="message hidden" role="status"></div>
+      <div id="resultWrap" class="result-wrap hidden">
+        <div class="result-head"><h3 id="resultTitle">Mentor response</h3><button id="copyBtn" class="text-button">Copy</button></div>
+        <pre id="result" class="result"></pre>
+      </div>
+      <button id="markSolvedBtn" class="mark-solved">✓ Mark problem as solved</button>
+    </section>
+
+    <footer class="footer"><span>AI Coding Mentor</span><button id="dashboardBtn" class="text-button">Learning dashboard ↗</button></footer>
+  </main>
+  <script src="marked.min.js"></script>
+  <script src="popup.js"></script>
+  
+<script src="marked.min.js"></script>
+</body>
+</html>

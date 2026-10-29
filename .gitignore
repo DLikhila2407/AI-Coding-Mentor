@@ -1,0 +1,15 @@
+# Secrets and local configuration
+.env
+.env.*
+*.local
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies/build artifacts if a backend is added later
+node_modules/
+dist/
+coverage/

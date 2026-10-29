@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Learning Dashboard — AI Coding Mentor</title><link rel="stylesheet" href="dashboard.css"></head>
+<body>
+  <main class="shell">
+    <header><div><div class="eyebrow">YOUR LEARNING JOURNEY</div><h1>Learning dashboard</h1><p>Review practice history and build consistency.</p></div><button id="clearBtn" class="danger">Clear history</button></header>
+    <section class="stats">
+      <div class="stat"><span>Problems solved</span><strong id="solved">0</strong></div>
+      <div class="stat"><span>Hints used</span><strong id="hints">0</strong></div>
+      <div class="stat"><span>Problems practiced</span><strong id="tracked">0</strong></div>
+    </section>
+    <section class="card"><div class="card-head"><div><h2>Practice history</h2><p>Your data is stored locally in this browser.</p></div><button id="exportBtn">Export JSON</button></div><div id="history" class="history"></div></section>
+    <a href="popup.html">← Return to the extension popup</a>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+</html>

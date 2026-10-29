@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Coding Mentor Settings</title><link rel="stylesheet" href="options.css"></head>
+<body>
+  <main class="shell">
+    <header><div class="mark">AI</div><div><h1>Mentor settings</h1><p>Configure your Gemini API connection.</p></div></header>
+    <section class="card">
+      <h2>Gemini API</h2>
+      <p>Get an API key from Google AI Studio, then paste it below. The key is saved in this browser's local extension storage.</p>
+      <label for="apiKey">Gemini API key</label>
+      <input id="apiKey" type="password" autocomplete="off" placeholder="Paste your API key">
+      <div class="inline"><input id="showKey" type="checkbox"><label for="showKey">Show key</label></div>
+      <label for="model">Model name</label>
+      <input id="model" type="text" value="gemini-2.5-flash" spellcheck="false">
+      <button id="saveBtn">Save settings</button>
+      <p id="status" role="status"></p>
+    </section>
+    <section class="card warning">
+      <h2>Security notes</h2>
+      <ul>
+        <li>Do not commit your API key to GitHub or include it in screenshots.</li>
+        <li>This starter saves the key locally in your browser; it is not a secure production secret store.</li>
+        <li>For a public release, use a backend that keeps the key server-side, authenticates users, and applies quotas.</li>
+        <li>Review your Google AI Studio account's usage limits and billing terms.</li>
+      </ul>
+    </section>
+    <a href="dashboard.html">Open learning dashboard →</a>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
